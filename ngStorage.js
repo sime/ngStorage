@@ -203,9 +203,9 @@
 
                 _last$storage = angular.copy($storage);
 
-                $rootScope.$watch(function() {
-                    _debounce || (_debounce = $timeout($storage.$apply, 100, false));
-                });
+                // $rootScope.$watch(function() {
+                //     _debounce || (_debounce = $timeout($storage.$apply, 100, false));
+                // });
 
                 // #6: Use `$window.addEventListener` instead of `angular.element` to avoid the jQuery-specific `event.originalEvent`
                 $window.addEventListener && $window.addEventListener('storage', function(event) {
